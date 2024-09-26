@@ -1,1 +1,9 @@
-# recomendacao
+Este arquivo Python implementa um sistema de recomendação de filmes utilizando o algoritmo de *K-Means*, que é um método de agrupamento (*clustering*) de aprendizado não supervisionado. O objetivo principal do sistema é agrupar usuários com base nos filmes que eles já assistiram e, em seguida, recomendar novos filmes para um determinado usuário, considerando os filmes assistidos por outros usuários dentro do mesmo grupo.
+
+A entrada do sistema é uma matriz binária, onde cada linha representa um usuário e cada coluna, um filme. Um valor de `1` indica que o usuário assistiu ao filme correspondente, enquanto `0` indica que não assistiu. O sistema usa o algoritmo *K-Means* para dividir os usuários em dois grupos (clusters), com base nas semelhanças de suas preferências de filmes.
+
+Após o agrupamento, o sistema classifica os usuários de acordo com o grupo a que pertencem. Com base nessa classificação, recomenda filmes para um usuário específico. O sistema analisa os filmes assistidos por outros usuários que pertencem ao mesmo grupo e sugere aqueles que o usuário ainda não assistiu.
+
+O algoritmo K-Means é a base da recomendação, pois agrupa os usuários de acordo com suas preferências similares. A recomendação final é gerada ao identificar usuários do mesmo cluster e extrair filmes assistidos por eles, mas não pelo usuário alvo. Isso permite que o sistema faça recomendações personalizadas e baseadas em padrões de comportamento comuns.
+
+Esse sistema de recomendação é eficiente para usuários com preferências semelhantes e pode ser expandido para incluir mais variáveis ou aumentar o número de grupos para uma segmentação mais detalhada.
